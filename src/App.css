@@ -1,4 +1,5 @@
 .App {
+  height: 100vh;
   text-align: center;
 }
 
@@ -7,12 +8,6 @@
   height: 80px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
 
 .App-intro {
   font-size: large;
@@ -22,3 +17,11 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.Landing{
+  background-image:url('./images/1600.jpg');
+  background-size: cover;
+  height: 100%;
+}
+
+/* Write media queries for 2000px screens */
