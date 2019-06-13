@@ -1,7 +1,8 @@
-.App {
-  height: 100vh;
+body, html, .App, #root, .Landing{height: 100%; width: 100%}
+/* .App {
+  height: 100%;
   text-align: center;
-}
+} */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -19,9 +20,20 @@
 }
 
 .Landing{
-  background-image:url('./images/aveng.svg');
+  /* background-image:url('./images/1600.jpg'); */
   background-size: cover;
-  height: 100%;
+
+}
+area{background-color: aqua}
+/* Write media queries for 2000px screens */
+
+.block{
+  position: absolute;
+  top:100px;
+  right:5px;
+  background-color: aquamarine;
+  height: 100px;
+  width: 100px
 }
 
-/* Write media queries for 2000px screens */
+
