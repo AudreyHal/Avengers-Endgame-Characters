@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Landing from './components/landing';
 import CaptainAmerica from './components/captainAmerica';
+import Stark from './components/stark';
 
 class App extends Component {
   constructor(props) {
@@ -20,8 +21,10 @@ class App extends Component {
   const displayComponent = this.state.displayComponent
     return (
       <div className="App">
-        {displayComponent === "Landing"  && <Landing clicked={this.clicked.bind(this)}></Landing>}
+      
         {displayComponent === "CaptainAmerica" && <CaptainAmerica></CaptainAmerica>}
+        {displayComponent === "Stark" && <Stark></Stark>}
+        {displayComponent === "Landing"  && <Landing clicked={this.clicked.bind(this)}></Landing>}
       </div>
     );
   }
