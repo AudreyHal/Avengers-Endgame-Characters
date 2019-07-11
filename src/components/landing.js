@@ -57,7 +57,7 @@ class Landing extends Component {
           <a onClick={e=> this.clickedCharacter(e, "CaptainAmerica")}>
           <polygon fill="transparent" className="racoon" points="1245,852,1284,863,1327,863,1349,899,1401,899,1444,899,1435,794,1387,762,1345,790,1336,846"></polygon>
           </a>
-          <a onClick={this.clickedCharacter.bind(this, "AntMan")}>
+          <a onClick={this.clickedCharacter.bind(this, "antMan")}>
           <polygon fill="transparent" className="ant-man" points="893,390,897,445,806,390,811,370,904,415,939,397,961,456,969,403,982,383,986,313,970,276,943,276,929,365"></polygon>
           </a>
           <a onClick={this.clickedCharacter.bind(this, "Nebulla")}>
