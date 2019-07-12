@@ -1,0 +1,56 @@
+{"characters":[
+    {
+        "name": "Steve Rogers", 
+        "title":"Captain America", 
+        "description":"Recipient of the Super-Soldier serum, World War II hero Steve Rogers fights for American ideals as one of the world’s mightiest heroes and the leader of the Avengers."
+    },
+    {
+        "name": "Tony Stark", 
+        "title":"Iron Man", 
+        "description":"Genius. Billionaire. Playboy. Philanthropist. Tony Stark's confidence is only matched by his high-flying abilities as the hero called Iron Man."
+    },
+    {
+        "name": "James Rhodes", 
+        "title":"War Machine", 
+        "description":"Military veteran James Rhodes is ready for combat in his advanced armor, adding a formidable arsenal to Tony Stark-created designs."
+    },
+    {
+        "name": "Natasha Romanoff", 
+        "title":"Black Widow", 
+        "description":"Military veteran James Rhodes is ready for combat in his advanced armor, adding a formidable arsenal to Tony Stark-created designs."
+	},
+	{
+        "name": "Bruce Banner", 
+        "title":"Hulk", 
+        "description":"Dr. Bruce Banner lives a life caught between the soft-spoken scientist he’s always been and the uncontrollable green monster powered by his rage."
+	},
+	{
+        "name": "Thor Odinson", 
+        "title":"Thor", 
+        "description":"The son of Odin uses his mighty abilities as the God of Thunder to protect his home Asgard and planet Earth alike."
+    },
+    {
+        "name": "Clint Barton", 
+        "title":"Hawkeye", 
+        "description":"A master marksman and longtime friend of Black Widow, Clint Barton serves as the Avengers’ amazing archer.."
+	},
+	{
+        "name": "T'CHALLA", 
+        "title":"Black Panther", 
+        "description":"T’Challa is the king of the secretive and highly advanced African nation of Wakanda - as well as the powerful warrior known as the Black Panther."
+	},
+	{
+        "name": "Thanos", 
+        "title":"Black Panther", 
+        "description":"The Mad Titan Thanos quests across the universe in search of the Infinity Stones, intending to use their limitless power for shocking purposes."
+	},
+	{
+        "name": "CAROL DANVERS", 
+        "title":"Captain Marvel", 
+        "description":"Carol Danvers becomes one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races."
+    }
+    
+    
+    
+    
+    ]}
