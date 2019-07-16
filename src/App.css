@@ -24,8 +24,16 @@ body, html, .App, #root, .Landing{height: 100%; width: 100%}
   background-size: cover;
 
 }
-area{background-color: aqua}
+area{
+  background-color: aqua
+}
 /* Write media queries for 2000px screens */
+
+
+.textarea{
+  width: 70px;
+  color: red
+}
 
 .block{
   position: absolute;
@@ -34,6 +42,16 @@ area{background-color: aqua}
   background-color: aquamarine;
   height: 100px;
   width: 100px
+}
+.text-container{
+  width: 40%;
+  color: white;
+  padding: 12rem 10px 10% 6rem
+}
+.character-name{
+  color: grey;
+  font-size: 5rem
+
 }
 
 
