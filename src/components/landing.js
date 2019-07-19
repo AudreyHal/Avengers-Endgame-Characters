@@ -41,6 +41,7 @@ class Landing extends Component {
     return (
 
       <div className="Landing">
+      <div class="textarea">Mathhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</div>
       
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900">
          <image height="100%" width="100%" xlinkHref={this.state.imgArray[this.state.arrayIndex]}></image>
