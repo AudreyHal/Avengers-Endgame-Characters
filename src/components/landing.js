@@ -41,8 +41,14 @@ class Landing extends Component {
     return (
 
       <div className="Landing">
-      <div class="textarea">Mathhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</div>
-      
+       <div className="textarea row">
+        <div className="col-12 text-container">
+          <div className="character-name">{this.state.characterName}</div>
+          <div className="character-title">{this.state.characterTitle}</div>
+          <div className="character-description">{this.state.characterDescription}</div>
+        </div>
+       </div>
+            
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900">
          <image height="100%" width="100%" xlinkHref={this.state.imgArray[this.state.arrayIndex]}></image>
           <a onClick={e=> this.clickedCharacter(e, "CaptainAmerica", 2)}>
@@ -88,10 +94,7 @@ class Landing extends Component {
           <polygon fill="transparent" className="" points=""></polygon>
           </a>
           {/* <rect fill="red" x="150" y="70" width="400" height="200">thhh</rect> */}
-          <text x="150" y="170" fill="red">{this.state.characterName}</text>
-          <text x="160" y="190" fill="red">{this.state.characterTitle}</text>
-          <text x="150" y="270" fill="red">{this.state.characterDescription}</text>
-          <text x="150" y="290" fill="red">uuuuuuu</text>
+         
         </svg>
       </div>
        
