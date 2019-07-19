@@ -96,7 +96,8 @@ class Landing extends Component {
           {/* <rect fill="red" x="150" y="70" width="400" height="200">thhh</rect> */}
          
         </svg>
-      </div>
+        </div>
+      
        
     );
   }

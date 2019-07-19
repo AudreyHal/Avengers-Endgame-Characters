@@ -34,6 +34,8 @@ image{z-index:1}
 .character-description{font-size: .9em}
 /* Write media queries for 2000px screens */
 
+
+
 .block{
   position: absolute;
   top:100px;
@@ -41,6 +43,16 @@ image{z-index:1}
   background-color: aquamarine;
   height: 100px;
   width: 100px
+}
+.text-container{
+  width: 40%;
+  color: white;
+  padding: 12rem 10px 10% 6rem
+}
+.character-name{
+  color: grey;
+  font-size: 2.2rem
+
 }
 
 
