@@ -13,6 +13,7 @@ import stark from '../images/stark.jpg';
 import thanos from '../images/thanos.jpg';
 import thor from '../images/thor.jpg';
 import widow from '../images/widow.jpg';
+import logo from '../images/avengers_logo_3.png';
 import data from '../data/data.json'
 
 
@@ -42,6 +43,9 @@ class Landing extends Component {
 
       <div className="Landing">
        <div className="textarea row">
+         <div className="header">
+           <img src={logo} alt="avengers_endgame_logo"></img>
+         </div>
         <div className="col-12 text-container">
           <div className="character-name">{this.state.characterName}</div>
           <div className="character-title">{this.state.characterTitle}</div>

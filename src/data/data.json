@@ -20,9 +20,39 @@
         "description":"Carol Danvers becomes one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races."
     },
     {
+        "name": "Nebula", 
+        "title":"Nebula", 
+        "description":"Nebula is a Luphomoid assassin, an adopted daughter of the intergalactic warlord Thanos and adopted sister of Gamora. As the right-hand woman of Ronan the Accuser during his and Thanos' quest to retrieve the Orb, she helped him fight the Guardians of the Galaxy during the Battle of Xandar."
+    },
+    {
+        "name": "Okoye", 
+        "title":"Okoye", 
+        "description":"Okoye is the General of the Dora Milaje and the head of Wakandan armed forces and intel. Witnessing T'Challa's coronation, she joins him in tracking down Ulysses Klaue."
+    },
+    {
+        "name": "Okoye", 
+        "title":"Okoye", 
+        "description":"Okoye is the General of the Dora Milaje and the head of Wakandan armed forces and intel. Witnessing T'Challa's coronation, she joins him in tracking down Ulysses Klaue."
+    },
+    {
+        "name": "89P13", 
+        "title":"Rocket", 
+        "description":"89P13 is a genetically enhanced creature turned freelance criminal, calling himself Rocket. Alongside his friend and partner Groot, Rocket traveled the galaxy picking up bounties until they met Star-Lord who then convinced them to assist him to sell the Orb for a massive profit."
+    },
+    {
         "name": "Tony Stark", 
         "title":"Iron Man", 
         "description":"Genius. Billionaire. Playboy. Philanthropist. Tony Stark's confidence is only matched by his high-flying abilities as the hero called Iron Man."
+    },
+    {
+        "name": "Thanos", 
+        "title":"Black Panther", 
+        "description":"The Mad Titan Thanos quests across the universe in search of the Infinity Stones, intending to use their limitless power for shocking purposes."
+    },
+    {
+        "name": "Thor Odinson", 
+        "title":"Thor", 
+        "description":"The son of Odin uses his mighty abilities as the God of Thunder to protect his home Asgard and planet Earth alike."
     },
     {
         "name": "James Rhodes", 
@@ -34,22 +64,11 @@
         "title":"Black Widow", 
         "description":"Military veteran James Rhodes is ready for combat in his advanced armor, adding a formidable arsenal to Tony Stark-created designs."
 	},
-	
-	{
-        "name": "Thor Odinson", 
-        "title":"Thor", 
-        "description":"The son of Odin uses his mighty abilities as the God of Thunder to protect his home Asgard and planet Earth alike."
-    },
-    
+	    
 	{
         "name": "T'CHALLA", 
         "title":"Black Panther", 
         "description":"T’Challa is the king of the secretive and highly advanced African nation of Wakanda - as well as the powerful warrior known as the Black Panther."
-	},
-	{
-        "name": "Thanos", 
-        "title":"Black Panther", 
-        "description":"The Mad Titan Thanos quests across the universe in search of the Infinity Stones, intending to use their limitless power for shocking purposes."
 	}
 	
     

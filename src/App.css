@@ -26,12 +26,12 @@ body, html, .App, #root, .Landing{height: 100%; width: 100%}
 
 }
 .textarea{color: white; z-index:10; position:relative; top:0px; width: 50% }
-.text-container{padding: 160px 7em}
+/* .text-container{padding: 160px 10em} */
 svg{z-index:1; position: absolute; top:0; left:0;   }
 image{z-index:1}
-.character-name{font-size: 1.8em; color: grey;  }
-.character-title{font-size: 2.2em; font-weight: 600; padding-bottom: 10px }
-.character-description{font-size: .9em}
+.character-name{font-size: 2em; color: grey; letter-spacing: 5px;  }
+.character-title{font-size: 2.7em; font-weight: 600; padding-bottom: 10px }
+.character-description{font-size: 1.2em; color: rgb(204, 204, 204)}
 /* Write media queries for 2000px screens */
 
 
@@ -44,15 +44,14 @@ image{z-index:1}
   height: 100px;
   width: 100px
 }
+.header{
+  padding: 2em 40px 0px 6rem 
+}
 .text-container{
   width: 40%;
   color: white;
-  padding: 12rem 10px 10% 6rem
+  padding: 11rem 70px 10% 6rem
 }
-.character-name{
-  color: grey;
-  font-size: 2.2rem
 
-}
 
 
