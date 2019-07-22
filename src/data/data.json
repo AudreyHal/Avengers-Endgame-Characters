@@ -1,5 +1,10 @@
 {"characters":[
     {   
+        "name": "Scott Lang", 
+        "title":"Ant-Man", 
+        "description":"Scott Edward Harris Lang is a former criminal who was convinced by Hank Pym to take up his mantle as the new Ant-Man."
+    },
+    {   
         "name": "Steve Rogers", 
         "title":"Captain America", 
         "description":"Recipient of the Super-Soldier serum, World War II hero Steve Rogers fights for American ideals as one of the world’s mightiest heroes and the leader of the Avengers."
@@ -30,11 +35,6 @@
         "description":"Okoye is the General of the Dora Milaje and the head of Wakandan armed forces and intel. Witnessing T'Challa's coronation, she joins him in tracking down Ulysses Klaue."
     },
     {
-        "name": "Okoye", 
-        "title":"Okoye", 
-        "description":"Okoye is the General of the Dora Milaje and the head of Wakandan armed forces and intel. Witnessing T'Challa's coronation, she joins him in tracking down Ulysses Klaue."
-    },
-    {
         "name": "89P13", 
         "title":"Rocket", 
         "description":"89P13 is a genetically enhanced creature turned freelance criminal, calling himself Rocket. Alongside his friend and partner Groot, Rocket traveled the galaxy picking up bounties until they met Star-Lord who then convinced them to assist him to sell the Orb for a massive profit."
@@ -46,7 +46,7 @@
     },
     {
         "name": "Thanos", 
-        "title":"Black Panther", 
+        "title":"Thanos", 
         "description":"The Mad Titan Thanos quests across the universe in search of the Infinity Stones, intending to use their limitless power for shocking purposes."
     },
     {
@@ -63,13 +63,8 @@
         "name": "Natasha Romanoff", 
         "title":"Black Widow", 
         "description":"Military veteran James Rhodes is ready for combat in his advanced armor, adding a formidable arsenal to Tony Stark-created designs."
-	},
-	    
-	{
-        "name": "T'CHALLA", 
-        "title":"Black Panther", 
-        "description":"T’Challa is the king of the secretive and highly advanced African nation of Wakanda - as well as the powerful warrior known as the Black Panther."
-	}
+	}	    
+	
 	
     
     

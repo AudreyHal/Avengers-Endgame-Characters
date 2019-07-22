@@ -24,21 +24,18 @@ class Landing extends Component {
       imgArray: [antMan, america, hawkEye, hulk, marvel, nebula, okoye, racoon, stark, thanos, thor, warMachine, widow, svg ], 
       arrayIndex:13,
       characterName:'',
-      characterTitle:'',
-      characterDescription:'',
+      characterTitle:'Hi There',
+      characterDescription:'Click on any chacter for more info ....',
 
     }
   }
   clickedCharacter(e, name, index){
     e.preventDefault();
-    console.log(data.characters[0].name);
-    this.setState({ arrayIndex: index, characterName: data.characters[0].name, characterTitle: data.characters[0].title, characterDescription: data.characters[0].description })
-    // const clicked = name
-    // this.props.clicked(clicked)
-  } 
+    console.log(data.characters[index].name);
+    this.setState({ arrayIndex: index, characterName: data.characters[index].name, characterTitle: data.characters[index].title, characterDescription: data.characters[index].description })
+   } 
 
   render() {
-    // const arrayIndex= this.state.imgArray[0]
     return (
 
       <div className="Landing">
@@ -97,8 +94,7 @@ class Landing extends Component {
           <a>
           <polygon fill="transparent" className="" points=""></polygon>
           </a>
-          {/* <rect fill="red" x="150" y="70" width="400" height="200">thhh</rect> */}
-         
+        
         </svg>
         </div>
       
