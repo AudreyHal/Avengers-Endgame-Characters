@@ -2,29 +2,45 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import Landing from './components/landing';
-import CaptainAmerica from './components/captainAmerica';
-import Stark from './components/stark';
+import Mobile from './components/mobile';
+
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {displayComponent: "Landing"};
+    this.state = { isDesktop: false };
+    this.updatePredicate = this.updatePredicate.bind(this);
   }
+  
 
- clicked(clicked_item){
-  this.setState({ displayComponent: clicked_item})
- }
+//  clicked(clicked_item){
+//   this.setState({ displayComponent: clicked_item})
+//  }
+
+ componentDidMount() {
+  this.updatePredicate();
+  window.addEventListener("resize", this.updatePredicate);
+}
+
+componentWillUnmount() {
+  window.removeEventListener("resize", this.updatePredicate);
+}
+
+updatePredicate() {
+  this.setState({ isDesktop: window.innerWidth > 641 });
+}
+   
 
   render() {
-  //  const landing =this.state.landing
-  //  const  captainAmerica =this.state.captainAmerica
-  const displayComponent = this.state.displayComponent
+    const isDesktop = this.state.isDesktop;
     return (
       <div className="App">
-      
-        {displayComponent === "CaptainAmerica" && <CaptainAmerica></CaptainAmerica>}
-        {displayComponent === "Stark" && <Stark></Stark>}
-        {displayComponent === "Landing"  && <Landing clicked={this.clicked.bind(this)}></Landing>}
+      {isDesktop ? (
+          <Landing ></Landing>
+        ) : (
+          <Mobile></Mobile>
+        )}
+        {/* <Landing ></Landing>} */}
       </div>
     );
   }

@@ -53,5 +53,90 @@ image{z-index:1}
   padding: 11rem 70px 10% 6rem
 }
 
+.Mobile{height:100vh;
+background-size: cover;
+background-position:  center }
 
+.mobile-container{
+  height: 100%;
+  /* background-color: rgb(0, 0, 0,0.9) */
+}
 
+.mobile-text-container{
+  padding: 130px 0px 0px;
+  color: rgb(206, 206, 206)
+}
+
+.dark-overlay{
+  margin-top: 50px;
+  padding: 20px;
+  background-color: rgb(0, 0, 0,0.9);
+  height: 200px ;
+}
+
+.mobile-name{
+  color: grey; letter-spacing: 5px; 
+}
+
+.mobile-title{
+  font-weight: 600; padding-bottom: 10px 
+}
+
+.mobile-description{
+  font-size: 12px
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(8, 8, 8, 1);
+  display: none;
+  /* top layer */
+  z-index: 9999;
+  transition: all 0.5s ease-in-out;
+}
+
+#overlay {
+  display: none;
+  position: absolute;
+  /* full screen */
+  width: 100vw;
+  height: 100vh;
+  top:0px;
+  /* transparent black */
+  background: rgba(0, 0, 0, 0.7);
+  /* middle layer, i.e. appears below the sidebar */
+  z-index: 998;
+  opacity: 0;
+  /* animate the transition */
+  transition: all 0.5s ease-in-out;
+}
+/* display .overlay when it has the .active class */
+#overlay.active {
+  display: block;
+  opacity: 1;
+}
+#sidebar.active{
+  display: block;
+  opacity: 1;
+}
+#dismiss {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  /* top right corner of the sidebar */
+  top: 10px;
+  right: 10px;
+}
+
+#close{
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  right: 0px;
+  padding: 5px 8px
+}
