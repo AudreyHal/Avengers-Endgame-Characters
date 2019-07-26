@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import Stark from '../images/stark_mobile3.jpg';
-// import America from '../images/america_mobile.jpg';
+import America from '../images/america_mobile.jpg';
 import Natasha from '../images/nat_mobile.jpg';
 import data from '../data/data.json'
 
@@ -8,8 +8,15 @@ class Mobile extends Component {
   constructor(){
     super();
     this.state ={
-      active: "false"
-
+      imgArray2: [America, Natasha ],
+      // imgArray: [antMan, america, hawkEye, hulk, marvel, nebula, okoye, racoon, stark, thanos, thor, warMachine, widow, svg ], 
+      active: "false",
+      background: America,
+      arrayIndex:0,
+      characterName:'',
+      characterTitle:'Hi There',
+      characterDescription:'Click on any chacter for more info ....',
+      
     }}
     clickedCharacter(e, name, index){
         e.preventDefault();
@@ -19,27 +26,26 @@ class Mobile extends Component {
 
   render() {
     return (
-      <div className="Mobile" style={{backgroundImage: `url(${Natasha})`}}>
+      <div className="Mobile" style={{backgroundImage: `url(${this.state.imgArray2[this.state.arrayIndex]})`}}>
 
 <nav id="sidebar" className={this.state.active && 'active'}>
   <div id="close" onClick={() => this.setState({active: !this.state.active})}>X</div>
     <div className="sidebar-header">
-       <h3>Bootstrap Sidebar</h3>
+       
       </div>
 
-        <ul className="list-unstyled components">
-            <p>Dummy Heading</p>
+        <ul className="nav_list">
             <li>
-                <a onClick={e=> this.clickedCharacter(e, "Stark", 8)}>Iron Man</a>
+                <a onClick={e=> this.clickedCharacter(e, "Stark", 0)}>Iron Man</a>
             </li>
             <li>
-                <a href="#">Captain America</a>
+                <a >Captain America</a>
             </li>
             <li>
-                <a href="#">Black Widow</a>
+                <a >Black Widow</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a >Contact</a>
             </li>
         </ul>
     </nav>

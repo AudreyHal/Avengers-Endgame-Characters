@@ -87,6 +87,7 @@ background-position:  center }
 }
 
 #sidebar {
+  color: white;
   min-width: 250px;
   max-width: 250px;
   height: 100vh;
@@ -134,9 +135,18 @@ background-position:  center }
 }
 
 #close{
-  color: white;
+  color: rgb(84, 11, 102);
   font-size: 18px;
   position: absolute;
   right: 0px;
   padding: 5px 8px
+}
+.nav_list li {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  
+}
+
+.nav_list{
+  list-style-type: none !important
 }
