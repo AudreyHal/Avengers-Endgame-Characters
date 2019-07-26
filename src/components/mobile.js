@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 // import Stark from '../images/stark_mobile3.jpg';
 // import America from '../images/america_mobile.jpg';
 import Natasha from '../images/nat_mobile.jpg';
+import data from '../data/data.json'
 
 class Mobile extends Component {
   constructor(){
     super();
     this.state ={
-      active: false
+      active: "false"
 
     }}
-  clickedCharacter(e, name){
-    e.preventDefault();
-    console.log(name)
-    const clicked = name
-    this.props.clicked(clicked)
-  } 
+    clickedCharacter(e, name, index){
+        e.preventDefault();
+        console.log(data.characters[index].name);
+        this.setState({ arrayIndex: index, characterName: data.characters[index].name, characterTitle: data.characters[index].title, characterDescription: data.characters[index].description })
+       } 
 
   render() {
     return (
@@ -29,37 +29,14 @@ class Mobile extends Component {
 
         <ul className="list-unstyled components">
             <p>Dummy Heading</p>
-            <li className="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
-                <ul className="collapse list-unstyled" id="homeSubmenu">
-                    <li>
-                        <a href="#">Home 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Home 3</a>
-                    </li>
-                </ul>
+            <li>
+                <a onClick={e=> this.clickedCharacter(e, "Stark", 8)}>Iron Man</a>
             </li>
             <li>
-                <a href="#">About</a>
-                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
-                <ul className="collapse list-unstyled" id="pageSubmenu">
-                    <li>
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Page 3</a>
-                    </li>
-                </ul>
+                <a href="#">Captain America</a>
             </li>
             <li>
-                <a href="#">Portfolio</a>
+                <a href="#">Black Widow</a>
             </li>
             <li>
                 <a href="#">Contact</a>
