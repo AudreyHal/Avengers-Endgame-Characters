@@ -25,7 +25,7 @@ class Landing extends Component {
       arrayIndex:13,
       characterName:'',
       characterTitle:'Hi There',
-      characterDescription:'Click on any chacter for more info ....',
+      characterDescription:'Click on any character for more info ....',
 
     }
   }

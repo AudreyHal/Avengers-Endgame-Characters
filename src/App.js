@@ -40,7 +40,7 @@ updatePredicate() {
         ) : (
           <Mobile></Mobile>
         )}
-        {/* <Landing ></Landing>} */}
+        
       </div>
     );
   }
