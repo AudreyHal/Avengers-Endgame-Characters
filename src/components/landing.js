@@ -37,21 +37,19 @@ class Landing extends Component {
 
   render() {
     return (
-
       <div className="Landing">
-       <div className="textarea row">
-         <div className="header">
-           <img src={logo} alt="avengers_endgame_logo"></img>
-         </div>
-        <div className="col-12 text-container">
-          <div className="character-name">{this.state.characterName}</div>
-          <div className="character-title">{this.state.characterTitle}</div>
-          <div className="character-description">{this.state.characterDescription}</div>
-        </div>
-       </div>
-            
+        <div className="textarea row">
+          <div className="header">
+            <img src={logo} alt="avengers_endgame_logo"></img>
+          </div>
+          <div className="col-12 text-container">
+            <div className="character-name">{this.state.characterName}</div>
+            <div className="character-title">{this.state.characterTitle}</div>
+            <div className="character-description">{this.state.characterDescription}</div>
+          </div>
+        </div>         
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900">
-         <image height="100%" width="100%" xlinkHref={this.state.imgArray[this.state.arrayIndex]}></image>
+          <image height="100%" width="100%" xlinkHref={this.state.imgArray[this.state.arrayIndex]}></image>
           <a onClick={e=> this.clickedCharacter(e, "CaptainAmerica", 1)}>
            <polygon fill="transparent"  className="captain-america" points="1177,552,1182,497,1182,479,1192,438,1230,424,1290,476,1278,526,1265,561,1278,586,1381,630,1408,678,1449,656,1505,694,1560,801,1582,807,1569,759,1593,882,1493,873,1337,712,1324,764,1296,798,1289,838,1238,836,1233,879,1242,884,1184,887,1151,879,1125,887,1141,774,1097,722,1064,769,1056,680,1098,767,1086,819,1060,880,1001,889,1015,812,1037,742,1040,665"></polygon>
           </a>
@@ -93,11 +91,9 @@ class Landing extends Component {
           </a>
           <a>
           <polygon fill="transparent" className="" points=""></polygon>
-          </a>
-        
+          </a>        
         </svg>
-        </div>
-      
+      </div>    
        
     );
   }
