@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import Landing from './components/landing';
 import Mobile from './components/mobile';
@@ -12,24 +11,19 @@ class App extends Component {
     this.updatePredicate = this.updatePredicate.bind(this);
   }
   
+  componentDidMount() {
+    this.updatePredicate();
+    window.addEventListener("resize", this.updatePredicate);
+  }
 
-//  clicked(clicked_item){
-//   this.setState({ displayComponent: clicked_item})
-//  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updatePredicate);
+  }
 
- componentDidMount() {
-  this.updatePredicate();
-  window.addEventListener("resize", this.updatePredicate);
-}
-
-componentWillUnmount() {
-  window.removeEventListener("resize", this.updatePredicate);
-}
-
-updatePredicate() {
-  this.setState({ isDesktop: window.innerWidth > 641 });
-}
-   
+  updatePredicate() {
+    this.setState({ isDesktop: window.innerWidth > 641 });
+  }
+    
 
   render() {
     const isDesktop = this.state.isDesktop;
@@ -39,8 +33,7 @@ updatePredicate() {
           <Landing ></Landing>
         ) : (
           <Mobile></Mobile>
-        )}
-        
+        )}        
       </div>
     );
   }

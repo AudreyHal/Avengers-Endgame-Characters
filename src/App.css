@@ -1,4 +1,8 @@
-body, html, .App, #root, .Landing{height: 100%; width: 100%}
+body, html, .App, #root, .Landing, .Mobile{
+  height: 100%; 
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+ }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -14,6 +18,7 @@ body, html, .App, #root, .Landing{height: 100%; width: 100%}
   position: relative;
 
 }
+
 .textarea{
   color: white; 
   z-index:10; 
@@ -21,25 +26,30 @@ body, html, .App, #root, .Landing{height: 100%; width: 100%}
   top:0px; 
   width: 50% 
 }
+
 svg{
   z-index:1; 
   position: absolute; 
   top:0; 
   left:0;
  }
+
 image{
   z-index:1
 }
+
 .character-name{
   font-size: 2em;
   color: grey; 
   letter-spacing: 5px;
  }
+
 .character-title{
   font-size: 2.7em; 
   font-weight: 600;
   padding-bottom: 10px 
 }
+
 .character-description{
   font-size: 1.2em;
   color: rgb(204, 204, 204)
@@ -103,14 +113,14 @@ image{
 }
 
 #sidebar {
-   color: rgb(226, 226, 226);
-   min-width: 250px;
+  color: rgb(226, 226, 226);
+  min-width: 250px;
   max-width: 250px;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  font-size: 13px;
+  font-size: 16px;
   background-color: rgba(8, 8, 8, 0.89);
   display: none;
    z-index: 9999;
@@ -128,16 +138,17 @@ image{
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
+
 /* display .overlay when it has the .active class */
 #overlay.active {
   display: block;
   opacity: 1;
 }
+
 #sidebar.active{
   display: block;
   opacity: 1;
 }
-
 
 #close{
   color: rgb(230, 230, 230);
@@ -148,19 +159,19 @@ image{
 }
 
 .nav_list li {
-  padding:5px;
-  border-bottom: 1px solid rgb(29, 29, 29);
-  
-}
+  padding:10px 15px;
+ }
+
 .nav_list li:hover {
-  background-color: rgba(17, 18, 36, 0.5)
+  color: rgb(69, 53, 252) !important;
+  border-right: 4px solid rgb(69, 53, 252)  !important;
 }
 
 .nav_list li a {
   padding-left: 10px;
  }
-
-.nav_list{
+ 
+ .nav_list{
   margin-top: 30px;
   list-style-type: none !important;
   padding:0px

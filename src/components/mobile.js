@@ -43,47 +43,44 @@ class Mobile extends Component {
             <div className="sidebar-header">
           </div>
           <ul className="nav_list">
-              <li>
-                <a onClick={e=> this.clickedCharacter(e, "AntMan", 0)}>Ant Man</a>
+              <li onClick={e=> this.clickedCharacter(e, "AntMan", 0)}>
+                <a >Ant Man</a>
               </li>
-              <li>
-              <a onClick={e=> this.clickedCharacter(e, "CaptainAmerica", 1)}>Captain America</a>
+              <li onClick={e=> this.clickedCharacter(e, "CaptainAmerica", 1)}>
+              <a >Captain America</a>
               </li>
-              <li>
-              <a onClick={e=> this.clickedCharacter(e, "HawkEye", 2)}> Hawk Eye</a>
+              <li onClick={e=> this.clickedCharacter(e, "Marvel", 4 )}>
+                <a >Captain Marvel</a>
               </li>
-              <li>
-                <a onClick={e=> this.clickedCharacter(e, "Hulk", 3)}>Hulk</a>
+              <li onClick={e=> this.clickedCharacter(e, "HawkEye", 2)}>
+              <a > Hawk Eye</a>
               </li>
-              <li>
-                <a onClick={e=> this.clickedCharacter(e, "Marvel", 4 )}>Captain Marvel</a>
+              <li onClick={e=> this.clickedCharacter(e, "Hulk", 3)}>
+                <a >Hulk</a>
+              </li>              
+              <li onClick={e=> this.clickedCharacter(e, "Nebulla", 5)}>
+                <a >Nebulla</a>
               </li>
-              <li>
-                <a onClick={e=> this.clickedCharacter(e, "Nebulla", 5)}>Nebulla</a>
+              <li onClick={e=> this.clickedCharacter(e, "Okoye", 6)}>
+                <a >Okoye</a>
               </li>
-              <li>
-                <a onClick={e=> this.clickedCharacter(e, "Okoye", 6)}>Okoye</a>
+              <li onClick={e=> this.clickedCharacter(e, "Racoon", 7)}>
+                <a >Racoon</a>
               </li>
-              <li>
-                <a onClick={e=> this.clickedCharacter(e, "Racoon", 7)}>Racoon</a>
+              <li onClick={e=> this.clickedCharacter(e, "Stark", 8)}>
+                <a >Stark</a>
               </li>
-              <li>
-                <a onClick={e=> this.clickedCharacter(e, "Okoye", 6)}>Hulk</a>
+              <li onClick={e=> this.clickedCharacter(e, "Thanos", 9)}>
+                <a >Thanos</a>
               </li>
-              <li>
-                <a onClick={e=> this.clickedCharacter(e, "Stark", 8)}>Stark</a>
+              <li onClick={e=> this.clickedCharacter(e, "Thor", 10)}>
+                <a >Thor</a>
               </li>
-              <li>
-                <a onClick={e=> this.clickedCharacter(e, "Thanos", 9)}>Thanos</a>
+              <li onClick={e=> this.clickedCharacter(e, "WarMachine", 11)}>
+                <a >War Machine</a>
               </li>
-              <li>
-                <a onClick={e=> this.clickedCharacter(e, "Thor", 10)}>Thor</a>
-              </li>
-              <li>
-                <a onClick={e=> this.clickedCharacter(e, "WarMachine", 11)}>War Machine</a>
-              </li>
-              <li>
-                <a onClick={e=> this.clickedCharacter(e, "Widow", 12)}>Widow</a>
+              <li onClick={e=> this.clickedCharacter(e, "Widow", 12)}>
+                <a >Widow</a>
               </li>
             </ul>
         </nav>

@@ -24,8 +24,8 @@ class Landing extends Component {
       imgArray: [antMan, america, hawkEye, hulk, marvel, nebula, okoye, racoon, stark, thanos, thor, warMachine, widow, svg ], 
       arrayIndex:13,
       characterName:'',
-      characterTitle:'Hi There',
-      characterDescription:'Click on any character for more info ....',
+      characterTitle:'Avengers, Assemble...',
+      characterDescription:'Click on any character for more details.',
 
     }
   }
