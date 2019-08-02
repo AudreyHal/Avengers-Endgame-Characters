@@ -16,12 +16,15 @@ import Thanos from '../images/mobile/thanos.jpg';
 import AntMan  from '../images/mobile/antman.jpg';
 import Endgame  from '../images/mobile/endgame2.jpg';
 
+
 class Mobile extends Component {
   constructor(){
     super();
     this.state ={
       imgArray2: [AntMan, America, Clint, Hulk, Marvel, Nebula, Okoye, Racoon, Stark, Thanos, Thor,  Rhodes, Widow, Endgame ],
       active: false,
+      hide_preload: false,
+      hide_text: true,
       background: America,
       arrayIndex:13,
       characterName:'',
@@ -32,12 +35,32 @@ class Mobile extends Component {
     clickedCharacter(e, name, index){
     e.preventDefault();
     console.log(data.characters[index].name);
-    this.setState({  arrayIndex: index, characterName: data.characters[index].name, characterTitle: data.characters[index].title, characterDescription: data.characters[index].description, active:false })
-  } 
+    this.setState({  arrayIndex: index, characterName: data.characters[index].name, characterTitle: data.characters[index].title, characterDescription: data.characters[index].description })
+    setTimeout(() => {this.setState({  active:false}); }, 500); } 
+
+    removePreloader = () =>{
+      this.setState({ hide_preload: true,  hide_text: false })
+    }
+    componentDidMount = () => {
+      this.image = new Image();
+      this.image.src = this.state.imgArray2[this.state.arrayIndex];
+      console.log(this.image.src )
+      this.image.onload = this.removePreloader;
+    }
+
+    updated = () => {
+      this.image = new Image();
+      this.image.src = this.state.imgArray2[this.state.arrayIndex];
+      console.log(this.image.src )
+      this.image.onload = this.removePreloader;
+    }
 
   render() {
     return (
       <div className="Mobile" style={{backgroundImage: `url(${this.state.imgArray2[this.state.arrayIndex]})`}}>
+        <div id="preloader" className={this.state.hide_preload && 'hide_preload'}>
+          <div id="loader"></div>
+        </div>
         <nav id="sidebar" className={this.state.active && 'active'}>
           <div id="close" onClick={() => this.setState({active: !this.state.active})}>X</div>
             <div className="sidebar-header">
@@ -65,7 +88,7 @@ class Mobile extends Component {
                 <a >Okoye</a>
               </li>
               <li onClick={e=> this.clickedCharacter(e, "Racoon", 7)}>
-                <a >Racoon</a>
+                <a >Rocket</a>
               </li>
               <li onClick={e=> this.clickedCharacter(e, "Stark", 8)}>
                 <a >Stark</a>
@@ -90,7 +113,7 @@ class Mobile extends Component {
       </div>
         <div className="mobile-container">
         <div className="col-12 mobile-text-container">
-          <div className="dark-overlay">
+          <div id="dark-overlay"  className={this.state.hide_text && 'hide_text'}>
             <p className="mobile-name">{this.state.characterName}</p>
             <p className="mobile-title">{this.state.characterTitle}</p>
             <p className="mobile-description">{this.state.characterDescription}</p>
