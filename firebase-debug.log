@@ -1,0 +1,25 @@
+[debug] [2019-08-01T14:28:13.206Z] ----------------------------------------------------------------------
+[debug] [2019-08-01T14:28:13.209Z] Command:       /usr/bin/node /usr/local/bin/firebase serve
+[debug] [2019-08-01T14:28:13.209Z] CLI Version:   7.2.2
+[debug] [2019-08-01T14:28:13.209Z] Platform:      linux
+[debug] [2019-08-01T14:28:13.209Z] Node Version:  v8.10.0
+[debug] [2019-08-01T14:28:13.209Z] Time:          Thu Aug 01 2019 15:28:13 GMT+0100 (WAT)
+[debug] [2019-08-01T14:28:13.209Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-01T14:28:13.214Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-01T14:28:13.214Z] > authorizing via signed-in user
+[debug] [2019-08-01T14:28:13.214Z] [iam] checking project avengers-endgame-73340 for permissions ["firebase.projects.get"]
+[debug] [2019-08-01T14:28:13.215Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/avengers-endgame-73340:testIamPermissions  
+
+[debug] [2019-08-01T14:28:14.850Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-01T14:28:14.857Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/avengers-endgame-73340  
+ 
+[debug] [2019-08-01T14:28:15.451Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/lopworks/code/react/avengers'...
+[info] 
+[debug] [2019-08-01T14:28:15.453Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/avengers-endgame-73340/webApps/-/config  
+ 
+[debug] [2019-08-01T14:28:16.392Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000
