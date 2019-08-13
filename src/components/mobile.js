@@ -14,6 +14,7 @@ import Clint from '../images/mobile/hawkeye.jpg';
 import Thor from '../images/mobile/thor.jpg';
 import Thanos from '../images/mobile/thanos.jpg';
 import AntMan  from '../images/mobile/antman.jpg';
+import Preloader from '../images/mobile/preloader.gif';
 import Endgame  from '../images/mobile/endgame2.jpg';
 
 
@@ -23,44 +24,47 @@ class Mobile extends Component {
     this.state ={
       imgArray2: [AntMan, America, Clint, Hulk, Marvel, Nebula, Okoye, Racoon, Stark, Thanos, Thor,  Rhodes, Widow, Endgame ],
       active: false,
-      hide_preload: false,
+      // hide_preload: false,
       hide_text: true,
       background: America,
       arrayIndex:13,
       characterName:'',
       characterTitle:'"Part of the journey is the end"',
       characterDescription:' - Tony Stark.',
+      background_img: `url(${Preloader})`
       
     }}
+
     clickedCharacter(e, name, index){
     e.preventDefault();
     console.log(data.characters[index].name);
-    this.setState({  arrayIndex: index, characterName: data.characters[index].name, characterTitle: data.characters[index].title, characterDescription: data.characters[index].description })
-    setTimeout(() => {this.setState({  active:false}); }, 500); } 
+    this.setState({ arrayIndex: index, characterName: data.characters[index].name, characterTitle: data.characters[index].title, characterDescription: data.characters[index].description }, ()=>{this.setState({ hide_text: true, background_img: `url(${Preloader})`}, ()=>{
+      this.image = new Image();
+      this.image.src = this.state.imgArray2[this.state.arrayIndex];
+      console.log(this.image.src )
+      this.image.onload = this.loadClearImage;
+    })})
+     setTimeout(() => {this.setState({  active:false}); }, 500); 
+     } 
+
+    loadClearImage = () =>{
+      this.setState({ background_img: `url(${this.state.imgArray2[this.state.arrayIndex]})`, hide_text: false})
+    }
 
     removePreloader = () =>{
-      this.setState({ hide_preload: true,  hide_text: false })
+      this.setState({ hide_text: false, background_img: `url(${Endgame})`})
     }
+    
     componentDidMount = () => {
       this.image = new Image();
       this.image.src = this.state.imgArray2[this.state.arrayIndex];
-      console.log(this.image.src )
-      this.image.onload = this.removePreloader;
+      this.image.onload = this.removePreloader;     
     }
-
-    updated = () => {
-      this.image = new Image();
-      this.image.src = this.state.imgArray2[this.state.arrayIndex];
-      console.log(this.image.src )
-      this.image.onload = this.removePreloader;
-    }
-
+    
   render() {
+    const divStyle ={backgroundImage: this.state.background_img}
     return (
-      <div className="Mobile" style={{backgroundImage: `url(${this.state.imgArray2[this.state.arrayIndex]})`}}>
-        <div id="preloader" className={this.state.hide_preload && 'hide_preload'}>
-          <div id="loader"></div>
-        </div>
+      <div className="Mobile" style={divStyle}>        
         <nav id="sidebar" className={this.state.active && 'active'}>
           <div id="close" onClick={() => this.setState({active: !this.state.active})}>X</div>
             <div className="sidebar-header">

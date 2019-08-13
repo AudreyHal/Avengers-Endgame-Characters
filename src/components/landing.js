@@ -31,7 +31,6 @@ class Landing extends Component {
   }
   clickedCharacter(e, name, index){
     e.preventDefault();
-    console.log(data.characters[index].name);
     this.setState({ arrayIndex: index, characterName: data.characters[index].name, characterTitle: data.characters[index].title, characterDescription: data.characters[index].description })
    } 
 
