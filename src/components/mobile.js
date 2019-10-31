@@ -62,29 +62,33 @@ class Mobile extends Component {
       this.image.onload = this.removePreloader;     
 
       this.setState({ loaderText: 'Loading'});
-      setTimeout(()=>{this.setState({ loaderText: 'Preparing Assets'})}, 4000)
-      setTimeout(()=>{this.setState({ loaderText: 'Getting everything set for you'})}, 9000)
-      setTimeout(()=>{this.setState({ loaderText: 'Almost Done'})}, 13000)
+      setTimeout(()=>{this.setState({ loaderText: 'Preparing Assets'})}, 6000)
+      setTimeout(()=>{this.setState({ loaderText: 'Getting everything set for you'})}, 11000)
+      setTimeout(()=>{this.setState({ loaderText: 'Almost Done'})}, 15000)
     }
     
   render() {
     const divStyle ={backgroundImage: this.state.background_img}
     return (
       <OnImagesLoaded
-      onLoaded={() => this.setState({ showLoader: true})}
-      onTimeout={() => this.setState({ showLoader: true })}
+      onLoaded={() => this.setState({ showLoader: false})}
+      onTimeout={() => this.setState({ showLoader: false })}
       timeout={100}
       >
       <div className="Mobile-Component" >
+
         {this.state.showLoader ? (
-            <div className="preloader-cover">
-              <div className="loader-text" id="mobile-loader-text">{this.state.loaderText}</div>        
+            <div className="preloader-cover" id="mobile-preloader-cover">
+              <div className="loader-text">{this.state.loaderText}</div>        
               <div className="reverse-spinner"></div>   
             </div>
+
           ) : (
+
           <div className="Mobile" style={divStyle}>        
             <nav id="sidebar" className={this.state.active && 'active'}>
-              <div id="close" onClick={() => this.setState({active: !this.state.active})}>X</div>          
+              <div id="close" onClick={() => this.setState({active: !this.state.active})}>X</div>   
+
               <ul className="nav_list">
                 <li onClick={e=> this.clickedCharacter(e, "AntMan", 0)}>
                   <a >Ant Man</a>
@@ -127,10 +131,12 @@ class Mobile extends Component {
                 </li>
               </ul>
             </nav>
+
             <div id="content">
               <div className="mobile-header">
                 <img src={logo} alt="avengers_endgame_logo" width="100px"></img>
               </div>
+
               <div className="mobile-container">
                 <div className="col-12 mobile-text-container">
                   <div id="dark-overlay"  className={this.state.hide_text && 'hide_text'}>
@@ -141,6 +147,7 @@ class Mobile extends Component {
                   </div>
                 </div>
               </div>
+              
               <div id="overlay" className={this.state.active && 'active'} ></div>
             </div>
           </div>

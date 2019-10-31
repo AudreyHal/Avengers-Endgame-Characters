@@ -1,8 +1,13 @@
-body, html, .App, #root, .Landing, .Mobile{
-  height: 100%; 
+body,
+html,
+.App,
+#root,
+.Landing,
+.Mobile {
+  height: 100%;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
- }
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -13,104 +18,104 @@ body, html, .App, #root, .Landing, .Mobile{
   font-size: large;
 }
 
-.Landing{
+.Landing {
   background-size: cover;
   position: relative;
 }
 
-.textarea{
-  color: white; 
-  z-index:10; 
-  position:relative; 
-  top:0px; 
-  width: 50% 
+.textarea {
+  color: white;
+  z-index: 10;
+  position: relative;
+  top: 0px;
+  width: 50%
 }
 
-svg{
-  z-index:1; 
-  position: absolute; 
-  top:0; 
-  left:0;
- }
-
-image{
-  z-index:1
+svg {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.character-name{
+image {
+  z-index: 1
+}
+
+.character-name {
   font-size: 2em;
-  color: grey; 
+  color: grey;
   letter-spacing: 5px;
- }
-
-.character-title{
-  font-size: 2.7em; 
-  font-weight: 600;
-  padding-bottom: 10px 
 }
 
-.character-description{
+.character-title {
+  font-size: 2.7em;
+  font-weight: 600;
+  padding-bottom: 10px
+}
+
+.character-description {
   font-size: 1.2em;
   color: rgb(204, 204, 204)
 }
 
-.block{
+.block {
   position: absolute;
-  top:100px;
-  right:5px;
+  top: 100px;
+  right: 5px;
   background-color: aquamarine;
   height: 100px;
   width: 100px
 }
 
-.header{
-  padding: 2em 40px 0px 6rem 
+.header {
+  padding: 2em 40px 0px 6rem
 }
 
-.text-container{
+.text-container {
   width: 40%;
   color: white;
   padding: 11rem 70px 10% 6rem
 }
 
-.Mobile{
-  height:100vh;
+.Mobile {
+  height: 100vh;
   background-size: cover;
-  background-position:  center
- }
+  background-position: center
+}
 
-.mobile-container{
+.mobile-container {
   height: 100%;
 }
 
-.mobile-text-container{
+.mobile-text-container {
   padding: 130px 0px 0px;
   color: rgb(206, 206, 206);
   position: absolute;
   bottom: 0px
 }
 
-#dark-overlay{
+#dark-overlay {
   padding: 20px;
   background-color: rgb(0, 0, 0, 0.86);
   margin: 0px 0px 0px 20px;
-  border-top-left-radius: 15px; 
+  border-top-left-radius: 15px;
   overflow: hidden;
 }
 
-.mobile-name{
+.mobile-name {
   color: grey;
   letter-spacing: 5px;
-  margin-bottom: 5px 
+  margin-bottom: 5px
 }
 
-.mobile-title{
+.mobile-title {
   font-weight: 600;
-  padding-bottom: 10px ;
-  margin-bottom: 5px 
+  padding-bottom: 10px;
+  margin-bottom: 5px
 }
 
-.mobile-description{
+.mobile-description {
   font-size: 12px
 }
 
@@ -126,7 +131,7 @@ image{
   font-size: 16px;
   background-color: rgba(8, 8, 8, 0.89);
   display: none;
-   z-index: 9999;
+  z-index: 9999;
   transition: all 0.5s ease-in-out;
 }
 
@@ -135,7 +140,7 @@ image{
   position: absolute;
   width: 100vw;
   height: 100vh;
-  top:0px;
+  top: 0px;
   background: rgba(0, 0, 0, 0.7);
   z-index: 998;
   opacity: 0;
@@ -143,17 +148,18 @@ image{
 }
 
 /* display .overlay when it has the .active class */
+
 #overlay.active {
   display: block;
   opacity: 1;
 }
 
-#sidebar.active{
+#sidebar.active {
   display: block;
   opacity: 1;
 }
 
-#close{
+#close {
   color: rgb(230, 230, 230);
   font-size: 18px;
   position: absolute;
@@ -162,71 +168,77 @@ image{
 }
 
 .nav_list li {
-  padding:10px 15px;
- }
+  padding: 10px 15px;
+}
 
 .nav_list li:hover {
   color: rgb(69, 53, 252) !important;
-  border-right: 4px solid rgb(69, 53, 252)  !important;
+  border-right: 4px solid rgb(69, 53, 252) !important;
 }
 
 .nav_list li a {
   padding-left: 10px;
- }
- 
- .nav_list{
-  margin-top: 30px;
-  list-style-type: none !important;
-  padding:0px;
-  
 }
 
-.character-button{
-  font-size:13px;
+.nav_list {
+  margin-top: 30px;
+  list-style-type: none !important;
+  padding: 0px;
+}
+
+.character-button {
+  font-size: 13px;
   border: 2px solid;
-  color:white;
+  color: white;
   animation-name: blink;
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
 .character-button:hover {
-  color:rgb(210, 210, 255);
+  color: rgb(210, 210, 255);
 }
 
-.character-button:active, .character-button:visited {
-  color:white;
+.character-button:active,
+.character-button:visited {
+  color: white;
 }
 
- @keyframes blink{
-  from { border-color: rgb(163, 163, 201); }
-	to { border-color: rgb(51, 43, 95); }
-}
 
 body {
   background-color: #222;
   overflow: hidden
 }
 
-.hide_preload{  display:none}
+.hide_preload {
+  display: none
+}
 
-.hide_text{  display:none}
+.hide_text {
+  display: none
+}
 
-li{  cursor: pointer}
+li {
+  cursor: pointer
+}
 
-.preloader-cover{
-  height: 100vh ;
+.preloader-cover {
+  height: 100vh;
   width: 100%;
-  z-index:10; 
-  position: absolute; 
-  top:0; 
-  left:0;
-  padding-top: 10%; 
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 10%;
   background-color: rgb(19, 18, 18);
   text-align: center
 }
 
-/* REVERSE SPINNER */
+#mobile-preloader-cover {
+  padding-top: 20%;
+}
+
+/* PRELOADER SPINNER */
 
 .reverse-spinner {
   position: relative;
@@ -256,10 +268,39 @@ li{  cursor: pointer}
   animation: spinBack 1s linear infinite;
 }
 
-.loader-text{
+.loader-text {
   color: #25b8f7;
   font-size: 18px;
   margin-bottom: 60px
+}
+
+@-webkit-keyframes blink {
+  from {
+    border-color: rgb(163, 163, 201);
+  }
+  to {
+    border-color: rgb(51, 43, 95);
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: rgb(163, 163, 201);
+  }
+  to {
+    border-color: rgb(51, 43, 95);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spin {

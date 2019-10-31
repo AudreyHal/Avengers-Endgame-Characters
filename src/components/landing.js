@@ -38,9 +38,9 @@ class Landing extends Component {
 
    componentDidMount(){
     this.setState({ loaderText: 'Loading'});
-    setTimeout(()=>{this.setState({ loaderText: 'Preparing Assets'})}, 4000)
-    setTimeout(()=>{this.setState({ loaderText: 'Getting everything set for you'})}, 9000)
-    setTimeout(()=>{this.setState({ loaderText: 'Almost Done'})}, 13000)
+    setTimeout(()=>{this.setState({ loaderText: 'Preparing Assets'})}, 6000)
+    setTimeout(()=>{this.setState({ loaderText: 'Getting everything set for you'})}, 11000)
+    setTimeout(()=>{this.setState({ loaderText: 'Almost Done'})}, 15000)
    }
 
   render() {
@@ -68,7 +68,8 @@ class Landing extends Component {
                 <div className="character-title">{this.state.characterTitle}</div>
                 <div className="character-description">{this.state.characterDescription}</div>
               </div>
-            </div>         
+            </div> 
+
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900">
               <image height="100%" width="100%" xlinkHref={this.state.imgArray[this.state.arrayIndex]}></image>
               <a onClick={e=> this.clickedCharacter(e, "CaptainAmerica", 1)}>
@@ -90,7 +91,7 @@ class Landing extends Component {
                 <polygon fill="transparent" className="johanssen" points="996,387,972,435,993,500,1071,392,1083,508,941,604,1052,562,997,413,1109,428,1167,594,995,385,1037,364,1102,413,1109,516,996,470,999,340,1036,306,1050,292,1014,356,1040,533,1042,541,927,619,910,610,753,530,907,636,963,627,1011,570,997,483"></polygon>
               </a>
               <a onClick={e=> this.clickedCharacter(e, "Okoye", 6)}>
-                <polygon fill="transparent" className       ="okoye" points="1493,431,1523,419,1538,426,1555,441,1562,457,1558,474,1554,485,1552,498,1542,503,1535,513,1525,512,1520,527,1513,651,1486,450,1500,461,1482,484,1472,502,1493,593,1519,661,1486,448,1513,517,1548,581,1565,523,1589,534,1582,581,1568,639,1522,677,1490,476,1517,670,1522,517,1524,647,1529,640"></polygon>
+                <polygon fill="transparent" className="okoye" points="1493,431,1523,419,1538,426,1555,441,1562,457,1558,474,1554,485,1552,498,1542,503,1535,513,1525,512,1520,527,1513,651,1486,450,1500,461,1482,484,1472,502,1493,593,1519,661,1486,448,1513,517,1548,581,1565,523,1589,534,1582,581,1568,639,1522,677,1490,476,1517,670,1522,517,1524,647,1529,640"></polygon>
               </a>
               <a onClick={e=> this.clickedCharacter(e, "HawkEye", 2)}>
               <polygon fill="transparent" className="hawk-eye" points="964,718,977,721,993,731,994,750,992,787,1008,800,983,899,787,899,810,821,789,893,796,843,820,828,784,895,819,808,791,880,851,728,966,642,788,894,873,899,885,899,864,777,924,800"></polygon>
@@ -109,11 +110,9 @@ class Landing extends Component {
               </a>
               <a onClick={e=> this.clickedCharacter(e, "Thanos", 9)}>
               <polygon fill="transparent" className="thanos" points="782,100,792,57,795,45,805,11,826,1,877,1,929,1,980,2,1033,1,1042,52,1038,77,1023,110,1008,131,1003,185,996,220,993,243,950,265,921,282,924,308,922,334,915,358,900,370,887,381,871,382,861,365,856,354,854,336,854,319,853,301,837,288,832,268,825,259,822,241,823,228,816,209,818,202,801,196,787,179,784,161,795,145,798,134,791,116"></polygon>
-              </a>
-              <a>
-              <polygon fill="transparent" className="" points=""></polygon>
-              </a>        
+              </a>                     
             </svg>
+
           </div> 
         )}    
         </div>
