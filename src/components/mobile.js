@@ -14,9 +14,8 @@ import Clint from '../images/mobile/hawkeye.jpg';
 import Thor from '../images/mobile/thor.jpg';
 import Thanos from '../images/mobile/thanos.jpg';
 import AntMan  from '../images/mobile/antman.jpg';
-import Preloader from '../images/mobile/preloader.gif';
 import Endgame  from '../images/mobile/endgame2.jpg';
-const OnImagesLoaded = require('react-on-images-loaded');
+var OnImagesLoaded = require('react-on-images-loaded');
 
 
 class Mobile extends Component {
@@ -25,66 +24,53 @@ class Mobile extends Component {
     this.state ={
       imgArray2: [AntMan, America, Clint, Hulk, Marvel, Nebula, Okoye, Racoon, Stark, Thanos, Thor,  Rhodes, Widow, Endgame ],
       active: false,      
-      hide_text: true,
+      hide_text: false,
       background: America,
       arrayIndex:13,
       characterName:'',
       characterTitle:'"Part of the journey is the end"',
       characterDescription:' - Tony Stark.',
-      background_img: `url(${Preloader})`,
+      background_img: `url(${Endgame})`,
       loaderText: ' '
       
     }}
 
     clickedCharacter(e, name, index){
     e.preventDefault();    
-    this.setState({ arrayIndex: index, characterName: data.characters[index].name, characterTitle: data.characters[index].title, characterDescription: data.characters[index].description }, ()=>{this.setState({ hide_text: true, background_img: `url(${Preloader})`}, ()=>{
-    
-    this.image = new Image();
-    this.image.src = this.state.imgArray2[this.state.arrayIndex];    
-    this.image.onload = this.loadClearImage;
-
-    })})
+    this.setState({ arrayIndex: index, characterName: data.characters[index].name, characterTitle: data.characters[index].title, characterDescription: data.characters[index].description }, ()=>{this.setState({  background_img: `url(${this.state.imgArray2[this.state.arrayIndex]})`}
+    )})
      setTimeout(() => {this.setState({  active:false}); }, 500); 
      } 
 
-    loadClearImage = () =>{
-      this.setState({ background_img: `url(${this.state.imgArray2[this.state.arrayIndex]})`, hide_text: false})
-    }
-
-    removePreloader = () =>{
-      this.setState({ hide_text: false, background_img: `url(${Endgame})`})
-    }
-    
-    componentDidMount = () => {
-      this.image = new Image();
-      this.image.src = this.state.imgArray2[this.state.arrayIndex];
-      this.image.onload = this.removePreloader;     
-
+        
+    componentDidMount = () => {      
       this.setState({ loaderText: 'Loading'});
       setTimeout(()=>{this.setState({ loaderText: 'Preparing Assets'})}, 6000)
       setTimeout(()=>{this.setState({ loaderText: 'Getting everything set for you'})}, 11000)
       setTimeout(()=>{this.setState({ loaderText: 'Almost Done'})}, 15000)
     }
+
+    runAfterImagesLoad =()=>{
+      console.log("loaded");
+      this.setState({ showLoader: false })
+    }   
+    
+    runAfterTimeout =()=>{
+     console.log("timeout");
+     this.setState({ showLoader: false })
+   }
     
   render() {
     const divStyle ={backgroundImage: this.state.background_img}
+    const visibleStyle={}
+    const hiddenStyle={display: 'none'}
     return (
-      <OnImagesLoaded
-      onLoaded={() => this.setState({ showLoader: false})}
-      onTimeout={() => this.setState({ showLoader: false })}
-      timeout={100}
-      >
       <div className="Mobile-Component" >
-
-        {this.state.showLoader ? (
-            <div className="preloader-cover" id="mobile-preloader-cover">
-              <div className="loader-text">{this.state.loaderText}</div>        
-              <div className="reverse-spinner"></div>   
-            </div>
-
-          ) : (
-
+        <OnImagesLoaded
+        onLoaded={() => this.setState({ showLoader: false})}
+        onTimeout={() => this.setState({ showLoader: false })}
+        timeout={50000}
+        >  
           <div className="Mobile" style={divStyle}>        
             <nav id="sidebar" className={this.state.active && 'active'}>
               <div id="close" onClick={() => this.setState({active: !this.state.active})}>X</div>   
@@ -150,10 +136,31 @@ class Mobile extends Component {
               
               <div id="overlay" className={this.state.active && 'active'} ></div>
             </div>
+          </div>        
+          <div className="hide_images">
+            <img src={Endgame} alt="endgame"/>  
+            <img src={America} alt="america"/>
+            <img src={AntMan } alt="antMan "/>
+            <img src={Clint} alt="hawkEye"/>
+            <img src={Hulk} alt="hulk"/>
+            <img src={Rhodes} alt="warMachine"/>
+            <img src={Marvel} alt="marvel"/>
+            <img src={Nebula} alt="nebula"/>
+            <img src={Okoye} alt="okoye"/>
+            <img src={Stark} alt="stark"/>
+            <img src={Thanos} alt="thanos"/>
+            <img src={Thor} alt="thor"/>
+            <img src={Racoon} alt="racoon"/>
+            <img src={Widow} alt="widow"/>
           </div>
-          )}
+        </OnImagesLoaded> 
+        
+        {/* Preloader */}
+        <div className="preloader-cover" id="mobile-preloader-cover" style={ this.state.showLoader ? visibleStyle : hiddenStyle }>
+          <div className="loader-text">{this.state.loaderText}</div>        
+          <div className="reverse-spinner"></div>   
         </div>
-      </OnImagesLoaded> 
+      </div>
     );
   }
 }
