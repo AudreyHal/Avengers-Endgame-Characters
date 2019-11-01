@@ -45,16 +45,13 @@ class Landing extends Component {
     setTimeout(()=>{this.setState({ loaderText: 'Almost Done'})}, 40000)
    }
 
-  runAfterImagesLoad =()=>{
-   console.log("loaded");
+  runAfterImagesLoad =()=>{   
    this.setState({ showLoader: false })
- }
-
+  }
  
- runAfterTimeout =()=>{
-  console.log("timeout");
-  this.setState({ showLoader: false })
-}
+  runAfterTimeout =()=>{ 
+    this.setState({ showLoader: false })
+  }
 
 
   render() {

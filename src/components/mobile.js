@@ -31,6 +31,7 @@ class Mobile extends Component {
       characterTitle:'"Part of the journey is the end"',
       characterDescription:' - Tony Stark.',
       background_img: `url(${Endgame})`,
+      showLoader: true,
       loaderText: ' '
       
     }}
@@ -50,15 +51,14 @@ class Mobile extends Component {
       setTimeout(()=>{this.setState({ loaderText: 'Almost Done'})}, 15000)
     }
 
-    runAfterImagesLoad =()=>{
-      console.log("loaded");
+    runAfterImagesLoad =()=>{   
       this.setState({ showLoader: false })
-    }   
+     }
     
-    runAfterTimeout =()=>{
-     console.log("timeout");
-     this.setState({ showLoader: false })
-   }
+    runAfterTimeout =()=>{ 
+      this.setState({ showLoader: false })
+    }
+   
     
   render() {
     const divStyle ={backgroundImage: this.state.background_img}
@@ -67,8 +67,8 @@ class Mobile extends Component {
     return (
       <div className="Mobile-Component" >
         <OnImagesLoaded
-        onLoaded={() => this.setState({ showLoader: false})}
-        onTimeout={() => this.setState({ showLoader: false })}
+        onLoaded={ this.runAfterImagesLoad }
+        onTimeout={ this.runAfterTimeout}
         timeout={50000}
         >  
           <div className="Mobile" style={divStyle}>        
@@ -137,7 +137,7 @@ class Mobile extends Component {
               <div id="overlay" className={this.state.active && 'active'} ></div>
             </div>
           </div>      
-            
+
           <div className="hide_images">
             <img src={Endgame} alt="endgame"/>  
             <img src={America} alt="america"/>
