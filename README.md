@@ -2,6 +2,8 @@
 ## Avengers Endgame Character Directory
 A showcase project by an avenger fan built with React JS.
 
+Note: 
+There are completely different designs for small and large screen displays, so feel free to try both.
 
 ## Available Scripts
 
