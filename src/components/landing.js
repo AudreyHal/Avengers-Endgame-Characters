@@ -120,6 +120,8 @@ class Landing extends Component {
             <polygon fill="transparent" className="thanos" points="782,100,792,57,795,45,805,11,826,1,877,1,929,1,980,2,1033,1,1042,52,1038,77,1023,110,1008,131,1003,185,996,220,993,243,950,265,921,282,924,308,922,334,915,358,900,370,887,381,871,382,861,365,856,354,854,336,854,319,853,301,837,288,832,268,825,259,822,241,823,228,816,209,818,202,801,196,787,179,784,161,795,145,798,134,791,116"></polygon>
             </a>                     
           </svg>
+          
+          <div className="hide_images">
           <img src={svg} alt="svg"/>    
           <img src={america} alt="america"/>
           <img src={antMan } alt="antMan "/>
@@ -133,7 +135,8 @@ class Landing extends Component {
           <img src={thanos} alt="thanos"/>
           <img src={thor} alt="thor"/>
           <img src={racoon} alt="racoon"/>
-          <img src={widow} alt="widow"/>    
+          <img src={widow} alt="widow"/>  
+          </div>  
        
         </OnImagesLoaded>
       

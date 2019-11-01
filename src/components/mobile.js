@@ -136,7 +136,8 @@ class Mobile extends Component {
               
               <div id="overlay" className={this.state.active && 'active'} ></div>
             </div>
-          </div>        
+          </div>      
+            
           <div className="hide_images">
             <img src={Endgame} alt="endgame"/>  
             <img src={America} alt="america"/>
@@ -154,7 +155,7 @@ class Mobile extends Component {
             <img src={Widow} alt="widow"/>
           </div>
         </OnImagesLoaded> 
-        
+
         {/* Preloader */}
         <div className="preloader-cover" id="mobile-preloader-cover" style={ this.state.showLoader ? visibleStyle : hiddenStyle }>
           <div className="loader-text">{this.state.loaderText}</div>        
